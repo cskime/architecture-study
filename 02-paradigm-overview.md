@@ -162,7 +162,7 @@
 
 - 소스코드의 의존성은 항상 제어 흐름을 따르게 된다. 즉, **고수준 함수를 호출하려면 고수준 함수가 포함된 모듈의 소스코드를 import** 해야 한다.
 
-    <img src="img/source-code-dependency-vs-control-flow.png">
+    <img src="img/source-code-dependency-vs-control-flow.png" width="50%">
 
 - 다형성을 사용하면 **소스 코드의 의존성을 역전**시킬 수 있다. 즉, **소스코드 의존성을 원하는 방향으로 마음대로 변경**할 수 있게 된다. 이것을 "**의존성 역전**" 기법이라고 한다.
 
