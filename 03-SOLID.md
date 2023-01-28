@@ -44,12 +44,84 @@
 
 - **Method를 다른 클래스로 이동시킨다.** 각 클래스에서는 공통 데이터 구조(`EmployeeData`)를 공유한다.
     <p><img src="img/srp-split-method.png" width="50%"></p>
-- 세 개의 클래스를 일일이 인스턴스화하고 추적해야 하는 단점은 **퍼사드 패턴(Facade Pattern)** 으로 해결 가능하다.
+- 세 개의 클래스를 일일이 인스턴스화하고 추적해야 하는 단점은 **퍼사드 패턴(Facade Pattern)** 으로 해결할 수 있다.
     <p><img src="img/srp-split-method-using-facade.png" width="70%"></p>
 
 ## Open-Closed Principle (개방 폐쇄 원칙)
 
 > 기존 코드를 수정하기보다 반드시 새로운 코드를 추가하는 방식으로 행위를 변경할 수 있어야 한다.
+
+- Open : 확장에는 열려 있어야 한다.
+- Closed : 변경에는 닫혀 있어야 한다.
+- 즉, 새로운 기능을 개발(확장)할 때는 기존 코드를 수정하는게 아니라 새로운 코드를 추가하는 방식으로 해야 한다. 
+    - 이상적인 변경량은 0이다.
+- **서로 다른 목적으로 변경되는 요소들을 분리하고, 이 요소들 사이에 의존성을 체계화하면 된다.**
+    - 서로 다른 목적을 갖는 요소들을 분리 : SRP
+    - 의존성 체계화 == 요소들 간 의존성을 분리한다 == **소스코드 독립성**을 확보한다 == **변경사항이 다른 요소로 전파되지 않는다.**
+
+### 기능과 컴포넌트 분리
+
+```
+재무 재표를 웹 페이지로 보여주는 시스템이 있다.
+이해 관계자가 동일한 정보를 보고서 형태로 출력하고 싶어 한다.
+출력한 보고서는 웹 페이지와 다른 방법으로 데이터를 보여준다.
+```
+
+- 기능 확장 : 데이터를 다른 방식으로 보여주는 View를 추가한다.
+- 기존 코드를 수정하지 않고 새 View를 추가하려면, 사용하려는 목적에 따라 요소들을 분리한다.
+    - 재무재표 데이터 생성
+    - 웹 페이지로 보여주기
+    - 프린터로 출력해서 보여주기
+        <p><img src="img/ocp-srp-concept.png" width="60%"></p>
+
+이렇게 분리한 요소들을 **컴포넌트 단위**로 구분한다.
+
+<p><img src="img/ocp-srp-separate-component.png"></p>
+
+- 컴포넌트
+    - View : 실제 UI 구현
+    - Presenter : UI에 보여줄 데이터 조작
+    - Controller : Interactor로부터 필요한 데이터를 요청하고 받아와서 Prsenter로 전달
+    - Interactor : Business Rule 담당, 가장 높은 수준의 업무 규칙을 포함하며 business logic 실행
+    - Database : 데이터 저장
+- 컴포넌트 간에 소스코드 의존성을 끊고 독립성을 유지할 수 있도록, 인터페이스를 사용해서 소스 코드 의존성을 역전시킨다.
+    - View와 Presenter : `ScreenView` 및 `PrintView` interface를 사용해서 UI와 의존성을 끊는다. View에서 UI의 구체적인 요소가 변경될 때, Presenter는 변경되지 않는다.
+    - Presenter와 Controller : `FinancialReportPresenter` interface를 사용해서 Presenter와 의존성을 끊는다. Presenter가 변경되더라도 데이터를 요청하고 가져오는 Controller는 변경되지 않는다.
+    - Controller와 Interactor : `FinancialReportRequester` interface를 사용해서 Controller와 의존성을 끊는다. Controller에서 데이터를 요청하는 방법이 변경되더라도, Interactor에서 데이터를 처리하는 business logic은 변경되지 않는다.
+    - Interactor와 Database : `FinancialDataGateway` interface를 사용해서 Interactor와 의존성을 끊는다. Interactor에서 business rule이 변경되더라도 Database는 영향이 없다.
+- 이렇게 분리한 컴포넌트들은 모두 "**변경으로부터 보호하려는 컴포넌트를 향하는 단방향 흐름**"을 이룬다. 즉, 컴포넌트 사이 의존성 흐름은 한 방향으로만 교차한다.
+    <p><img src="img/ocp-srp-components.png" width="50%"></p>
+- 소프트웨어에서 가장 중요한 업무 규칙을 포함하고 있는 Interactor가 다른 변경 사항에 영향을 받지 않도록 보호해야 한다. **컴포넌트를 분리하고 의존성이 단방향으로 흐르도록 구성**하면 Controller, Presenter, View에서 발생하는 변경 사항들이 Interactor에 영향을 주지 못한다.
+
+**A 컴포넌트에서 발생한 변경으로부터 B 컴포넌트를 보호하려면 반드시 A가 B에 의존해야 한다.**
+- View의 변경으로부터 Presenter를 보호하려면 View가 Presenter에 의존해야 한다. 즉, Presenter가 View에 의존하면 안된다.
+- Presenter가 View를 업데이트 하려면 제어 흐름은 Presenter에서 View로 향하는데, 이 때 소스코드 의존성도 Presenter에서 View로 향한다.
+- 하지만, Presenter가 View에 의존하면 안되므로 interface를 사용해서 의존성을 역전시킨다.
+- Presenter는 interface만 의존하므로 구체적인 View는 알지 못한다.
+
+어떤 컴포넌트를 우선적으로 보호해야 하는지는 '**수준(level)**'을 바탕으로 계층 구조를 이룬다.
+1. Interactor : 업무 규칙(Busniess Rule)을 다루기 때문에 가장 높은 수준
+2. Controller
+3. Presenter
+4. View : 가장 낮은 수준. 가장 많이, 쉽게 변경될 수 있다.
+
+### 정보 은닉
+
+- 위 그림에서 Controller와 Interactor 사이에 위치하는 `FinancialReporterRequester`는 방향성 제어와는 다른 목적을 가진다.
+- 이 모듈은 Controller가 Interactor 내부에 대해 너무 많이 알지 못하기 위해 존재한다. 즉, **Interactor 내부를 은닉**하기 위해 사용한다.
+    - `FinancialReporterRequester` interface가 없었다면, Controller는 `FinancialReportGenerator`를 직접 의존하게 되고 `FinancialEntities`에 **추이 종속성**을 가지게 된다.
+        - 추이 종속성 : A가 B에 의존하고 B가 C에 의존하면 A도 C에 의존하게 되는 것
+    - Controller는 `FinancialEntities`를 직접 사용하지 않기 때문에 추이 종속성을 갖는 것은 '사용하지 않는 요소에 의존하면 안된다'는 원칙에 위배된다.
+
+### 정리
+
+OCP는 시스템을 확장하기 쉬우면서 변경이 너무 많은 시스템에 영향을 주지 않도록 하는 데 있다.
+
+아키텍처 수준에서 OCP가 동작하는 방식은,
+
+1. 기능을 언제, 어떻게, 왜 발생하는지에 따라 분리
+2. 분리한 기능을 컴포넌트 단위로 분리한 뒤 계층구조로 조직화
+3. 저수준 컴포넌트로부터 고수준 컴포넌트를 보호할 수 있는 구조로 **의존성 계층구조** 형성
 
 ## Liskov Substitution Principle (리스코프 치환 원칙)
 
