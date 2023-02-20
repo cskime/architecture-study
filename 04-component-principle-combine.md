@@ -1,4 +1,4 @@
-# 컴포넌트 결합
+# Component 결합
 
 > Clean Architecture 4부 14장
 
