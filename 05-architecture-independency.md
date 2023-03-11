@@ -1,4 +1,4 @@
-# Architecture
+# Architecture - Independency
 
 > Clean Architecture 5부 15~16장
 
