@@ -17,4 +17,4 @@ Clean Architecture를 공부하는 공간
 | 5 | [4부. 컴포넌트 원칙 - 결합](https://github.com/cskime/clean-architecture-study/blob/main/04-component-principle-combine.md) | 2023.02.06 |
 | 6 | [5부. 아키텍처 - 독립성](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-independency.md) | 2023.02.21 |
 | 7 | [5부. 아키텍처 - 경계](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-boundary.md) | 2023.03.11 |
-| 8 | 세부사항 |  |
+| 8 | [5부. 아키텍처 - 정책, 수준, 세부사항](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-policy-level-business-rule.md) | 2023.03.25 |
