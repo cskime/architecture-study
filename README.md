@@ -20,3 +20,5 @@ Clean Architecture를 공부하는 공간
 | 8 | [5부. 아키텍처 - 정책, 수준, 세부사항](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-policy-level-business-rule.md) | 2023.03.25 |
 | 9 | [5부. 아키텍처 - 소리치는 아키텍처, 클린 아키텍처](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-clean-architecture.md) | 2023.03.26 |
 | 10 | [5부. 아키텍처 - 프레젠터와 험블 객체](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-humble.md) | 2023.04.02 |
+| 11 | [5부. 아키텍처 - 부분적 경계, 계층과 경계](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-level-boundary.md) | 2023.04.04 |
+| 12 | [5부. 아키텍처 - 메인 컴포넌트](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-main-component.md) | 2023.04.05 |
