@@ -23,4 +23,5 @@ Clean Architecture를 공부하는 공간
 | 11 | [5부. 아키텍처 - 부분적 경계, 계층과 경계](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-level-boundary.md) | 2023.04.04 |
 | 12 | [5부. 아키텍처 - 메인 컴포넌트](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-main-component.md) | 2023.04.05 |
 | 13 | [5부. 아키텍처 - '크고 작은 모든' 서비스들](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-service.md) | 2023.04.16 |
-| 13 | [5부. 아키텍처 - 테스트 경계](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-test-boundary.md) | 2023.04.18 |
+| 14 | [5부. 아키텍처 - 테스트 경계](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-test-boundary.md) | 2023.04.18 |
+| 15 | [5부. 아키텍처 - 클린 임베디드 아키텍처](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-clean-embeded-architecture.md) | 2023.04.20 |
