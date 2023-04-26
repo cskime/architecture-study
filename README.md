@@ -25,3 +25,4 @@ Clean Architecture를 공부하는 공간
 | 13 | [5부. 아키텍처 - '크고 작은 모든' 서비스들](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-service.md) | 2023.04.16 |
 | 14 | [5부. 아키텍처 - 테스트 경계](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-test-boundary.md) | 2023.04.18 |
 | 15 | [5부. 아키텍처 - 클린 임베디드 아키텍처](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-clean-embeded-architecture.md) | 2023.04.20 |
+| 16 | [6부. 세부사항](https://github.com/cskime/clean-architecture-study/blob/main/06-detail.md) | 2023.04.26 |
