@@ -27,3 +27,4 @@ Clean Architecture를 공부하는 공간
 | 15 | [5부. 아키텍처 - 클린 임베디드 아키텍처](https://github.com/cskime/clean-architecture-study/blob/main/05-architecture-clean-embeded-architecture.md) | 2023.04.20 |
 | 16 | [6부. 세부사항 - 데이터베이스, 웹, 프레임워크](https://github.com/cskime/clean-architecture-study/blob/main/06-detail-db-web-framework.md) | 2023.04.26 |
 | 17 | [6부. 세부사항 - 사례 연구](https://github.com/cskime/clean-architecture-study/blob/main/06-detail-case-study.md) | 2023.04.27 |
+| 18 | [6부. 빠져 있는  - 컴포넌트 기반 패키지](https://github.com/cskime/clean-architecture-study/blob/main/06-detail-others.md) | 2023.05.23 |
