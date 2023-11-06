@@ -8,6 +8,10 @@ Clean Architecture를 공부하는 공간
 
 ## Contents
 
+- [2회독 요약](https://github.com/cskime/clean-architecture-study/blob/main/summary.md)
+
+---
+
 |       | Name | Date |
 | :---: | :---: | :---: |
 | 1 | [1부. 설계와 아키텍처 소개](https://github.com/cskime/clean-architecture-study/blob/main/01-architecture-overview.md) | 2023.01.24 |
