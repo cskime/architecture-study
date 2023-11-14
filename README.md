@@ -8,7 +8,7 @@ Clean Architecture를 공부하는 공간
 
 ## Contents
 
-- [2회독 요약](https://github.com/cskime/clean-architecture-study/blob/main/summary.md)
+- [Clean Architecture 스터디 2회독](https://github.com/cskime/clean-architecture-study/blob/main/summary-2ed.md)
 
 ---
 
