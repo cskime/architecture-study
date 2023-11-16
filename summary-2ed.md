@@ -1,5 +1,8 @@
 # Sumary
 
+<details>
+<summary>Key concepts</summary>
+
 ## Keywords
 
 ### Object Design Principle
@@ -53,6 +56,8 @@
 - ISP와 CRP : 필요하지 않은 것에 의존하지 말라
   - ISP : 사용하지 않는 메서드가 있는 클래스에 의존하지 말아라
   - CRP : 사용하지 않는 클래스가 있는 컴포넌트에 의존하지 말아라
+
+</details>
 
 ## 17장. 경계: 선 긋기
 
