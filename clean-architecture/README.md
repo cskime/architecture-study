@@ -1,7 +1,5 @@
 # Clean Architecture Study
 
-Clean Architecture를 공부하는 공간
-
 ## Tools
 
 - 📚 [Clean Architecture](https://ebook.insightbook.co.kr/book/69)
