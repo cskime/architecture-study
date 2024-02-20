@@ -4,5 +4,6 @@ Architecture를 공부하는 공간
 
 ## Contents
 
-- [Clean Architecture](https://github.com/cskime/clean-architecture-study/tree/main/clean-architecture)
-- [Clean Swift](https://github.com/cskime/clean-architecture-study/tree/main/clean-swift)
+- [Clean Architecture](./clean-architecture)
+- [Clean Swift](./clean-swift)
+- [Building a Scalable App Architecture for SuperApp Operations](./highly-scalable-architecture)
