@@ -3,6 +3,7 @@
 ## Tools
 
 - 🎥 [The RED: 슈퍼앱 운영을 위한 확장성 높은 앱 아키텍처 구축 by 노수진](https://fastcampus.co.kr/dev_red_rsj)
+- 🌐 [MiniSuperApp-fastcampus | GitHub](https://github.com/nsoojin/MiniSuperApp-fastcampus?tab=readme-ov-file)
 
 ## Contents
 
