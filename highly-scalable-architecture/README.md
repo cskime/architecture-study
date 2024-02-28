@@ -4,6 +4,12 @@
 
 - 🎥 [The RED: 슈퍼앱 운영을 위한 확장성 높은 앱 아키텍처 구축 by 노수진](https://fastcampus.co.kr/dev_red_rsj)
 - 🌐 [MiniSuperApp-fastcampus | GitHub](https://github.com/nsoojin/MiniSuperApp-fastcampus?tab=readme-ov-file)
+- 📦 [ModernRIBs](https://github.com/DevYeom/ModernRIBs)
+- 📦 [Combine Schedulers](https://github.com/pointfreeco/combine-schedulers)
+- 📦 [CombineExt](https://github.com/CombineCommunity/CombineExt)
+- 📦 [Swifter](https://github.com/httpswift/swifter)
+- 📦 [Hammer](https://github.com/lyft/Hammer)
+- 📦 [SnapshotTesting](https://github.com/pointfreeco/swift-snapshot-testing)
 
 ## Contents
 
