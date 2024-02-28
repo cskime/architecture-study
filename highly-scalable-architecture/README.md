@@ -22,3 +22,4 @@
 |  2  |               [코드 레벨 아키텍처](./02.code-level-architecture.md)               | 2024.02.20 |
 |  3  |              [모듈 레벨 아키텍처](./03.module-level-architecture.md)              | 2024.02.23 |
 |  4  |                    [자동화 테스팅](./04.automated-testing.md)                     | 2024.02.28 |
+|  5  |                        [확장성 있는 인프라](./05.infra.md)                        | 2024.02.28 |
