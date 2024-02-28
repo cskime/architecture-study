@@ -10,9 +10,12 @@
 ### Subjects
 
 - Composition
-- Modular Architecture
-- Dependency Control
-- Loose coupling, OCP
+- Composition root
+- Modular architecture
+- Dependency control
+- Loose coupling & OCP
+- Test pyramid: Unit test, Snapshot Test, UI test, Integration test
+- Feature flag
 
 ### Log
 
